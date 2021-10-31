@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Practice</title>
+	<style>
+		:root {
+  --themeRed: hsl(0, 100%, 74%);
+  --themeGreen: hsl(154, 59%, 51%);
+  --themeBlue: hsl(248, 32%, 49%);
+  --themeDBlue: hsl(249, 10%, 26%);
+  --themeGrayBlue: hsl(246, 25%, 77%);
+}
+
+/* бәріне тиісті стильдер */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Body-ге байланысты стильдер */
+body {
+  min-height: 100vh;
+  background-image: url("../images/bg-intro-mobile.png");
+  background-color: var(--themeRed);
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+main {
+  margin: 7em 0;
+  max-width: 23.4375em;
+}
+
+main .short-description__container h1 {
+  font-size: 2.1rem;
+  line-height: 1.4em;
+  padding: 0 1em;
+  margin-bottom: 0.7em;
+}
+
+main .short-description__container p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.75em;
+  margin-bottom: 3.5em;
+}
+
+main .cost-container {
+  background-color: var(--themeBlue);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  line-height: 1.7em;
+  padding: 1.4em 4.2em;
+  border-radius: 0.7em;
+  margin-bottom: 1.5em;
+  -webkit-box-shadow: 0 7px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 7px 0 rgba(0, 0, 0, 0.15);
+}
+
+main .cost-container .free-period {
+  font-weight: 600;
+}
+
+main .form-container {
+  background: #fff;
+  padding: 2em;
+  border-radius: 0.7em;
+  -webkit-box-shadow: 0 7px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 7px 0 rgba(0, 0, 0, 0.16);
+}
+
+main .form-container input {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: var(--themeDBlue);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1em;
+  border: 1px solid var(--themeGrayBlue);
+  border-radius: 0.4em;
+  margin-bottom: 1.2em;
+}
+
+main .form-container .empty-field {
+  border: 2px solid var(--themeRed);
+  background: url("../images/icon-error.svg") no-repeat;
+  background-position: 95% 50%;
+}
+
+main .form-container .example::-webkit-input-placeholder {
+  color: var(--themeRed);
+}
+
+main .form-container .example:-ms-input-placeholder {
+  color: var(--themeRed);
+}
+
+main .form-container .example::-ms-input-placeholder {
+  color: var(--themeRed);
+}
+
+main .form-container .example::placeholder {
+  color: var(--themeRed);
+}
+
+main .form-container #firstnameText,
+main .form-container #lastnameText,
+main .form-container #emailText,
+main .form-container #passwordText {
+  display: none;
+  color: var(--themeRed);
+  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: right;
+  padding-bottom: 1em;
+  margin-top: -1em;
+}
+
+main .form-container .formBtn {
+  display: block;
+  background-color: var(--themeGreen);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid #16bb74;
+  -webkit-box-shadow: 0 -4px #16bb74 inset;
+          box-shadow: 0 -4px #16bb74 inset;
+  cursor: pointer;
+}
+
+main .form-container .formBtn:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+
+main .form-container .terms-and-services {
+  color: var(--themeGrayBlue);
+  font-size: 0.8rem;
+  line-height: 1.9em;
+  padding: 0 0.7em;
+}
+
+main .form-container .terms-and-services .tas {
+  color: var(--themeRed);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+main .form-container .terms-and-services a {
+  text-decoration: none;
+}
+
+.attribution {
+  margin-bottom: 0.9em;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+  text-decoration: none;
+}
+
+@media (min-width: 70em) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+  main {
+    min-width: 70em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .short-description {
+    width: 50%;
+    text-align: left;
+    margin-top: -1em;
+  }
+  main .short-description .short-description__container h1 {
+    font-size: 3.1rem;
+    line-height: 1.2em;
+    padding: 0;
+    padding-right: 1.15em;
+    margin-bottom: 0.5em;
+  }
+  main .short-description .short-description__container p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin-right: 1em;
+    margin-bottom: 0;
+  }
+  main .cost-and-form {
+    width: 50%;
+  }
+  main .cost-and-form .cost-container {
+    padding: 1em 3em;
+  }
+  main .cost-and-form .form-container input[type="text"],
+  main .cost-and-form .form-container [type="email"],
+  main .cost-and-form .form-container [type="password"] {
+    padding-left: 1.9em;
+  }
+  main .cost-and-form .form-container .formBtn {
+    letter-spacing: 0.02em;
+  }
+}
+	</style>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- фавикон -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+
+    <!-- Шрифттарды қою -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- стильдер -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Sign Up To Free Course</title>
+  </head>
+  <body>
+    <main>
+      <div class="short-description">
+        <div class="short-description__container">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+      </div>
+
+      <div class="cost-and-form">
+        <div class="cost-container">
+          <p>
+            <span class="free-period">Try it free 7 days</span> then $20/mo.
+            thereafter
+          </p>
+        </div>
+
+        <div class="form-container">
+          <div class="logging-info">
+            <form>
+              <input class="form-field" type="text" id="firstname" placeholder="First Name"/>
+              <p id="firstnameText">First Name cannot be empty</p>
+
+              <input class="form-field" type="text" id="lastname" placeholder="Last Name"/>
+              <p id="lastnameText">Last Name cannot be empty</p>
+
+              <input class="form-field" type="email" id="email" placeholder="Email Address"/>
+              <p id="emailText">Looks like ths is not an email</p>
+
+              <input class="form-field" type="password" id="password" placeholder="Password"/>
+              <p id="passwordText">Password cannot be empty</p>
+
+              <input type="submit" class="formBtn" id="sendBtn" value="Claim your free trial"/>
+            </form>
+          </div>
+          <div class="terms-and-services">
+            <p>
+              By clicking the button, you are agreeing to our
+              <a href="#"><span class="tas">Terms and Services</span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- скрипттерді жалғау -->
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+</body>
+</html>
